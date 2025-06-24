@@ -1,0 +1,51 @@
+# Arquivos do Maven
+target/
+!target/*.jar
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Arquivos do Git
+.git/
+.gitignore
+
+# Arquivos do IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Arquivos de configuração local
+application-local.yml
+application-dev.yml
+
+# Documentação
+README.md
+API_SECURITY_GUIDE.md
+*.md
+
+# Arquivos de monitoramento
+monitoring/
+
+# Arquivos de teste
+src/test/ 
