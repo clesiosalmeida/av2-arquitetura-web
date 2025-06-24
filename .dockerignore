@@ -1,0 +1,50 @@
+# Arquivos do Maven
+autheticuser/target/
+!autheticuser/target/*.jar
+autheticuser/pom.xml.tag
+autheticuser/pom.xml.releaseBackup
+autheticuser/pom.xml.versionsBackup
+autheticuser/pom.xml.next
+autheticuser/release.properties
+autheticuser/dependency-reduced-pom.xml
+autheticuser/buildNumber.properties
+autheticuser/.mvn/timing.properties
+autheticuser/.mvn/wrapper/maven-wrapper.jar
+
+# Arquivos do Git
+.git/
+.gitignore
+
+# Arquivos do IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Arquivos de configuração local
+autheticuser/application-local.yml
+autheticuser/application-dev.yml
+
+# Documentação
+README.md
+API_SECURITY_GUIDE.md
+*.md
+
+autheticuser/monitoring/
+
+# Arquivos de teste
+autheticuser/src/test/ 
