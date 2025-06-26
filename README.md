@@ -98,3 +98,4 @@ Name: Content-Type
 Value: application/json
 
 Visualizar resultados: Clique direito em Thread Group > Add > Listener > View Results Tree
+# av2-arquitetura-web
