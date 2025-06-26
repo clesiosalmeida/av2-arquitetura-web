@@ -55,13 +55,10 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        ..antMatchers("/", "/auth/login", "/auth/validate", "/h2-console/**", "/swagger-ui/**",
-                                "/v3/api-docs/**")
-                        .permitAll()
-                        .anyRequest().authenticated())
-                .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()));
-        // .oauth2ResourceServer(oauth2 -> oauth2.jwt()); // ← Comentado temporariamente
-        // para permitir testes sem JWT
+                .antMatchers("/", "/auth/login", "/auth/validate", "/swagger-ui/**", "/v3/api-docs/**").permitAll()        
+                .anyRequest().authenticated())
+                .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()))
+                .oauth2ResourceServer(oauth2 -> oauth2.jwt()); 
 
         return http.build();
     }
