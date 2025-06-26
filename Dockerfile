@@ -1,14 +1,13 @@
-# Use uma imagem base do Java
-FROM openjdk:11-jdk-slim
+# Etapa de build
+FROM maven:3.9.6-eclipse-temurin-17 AS builder
+WORKDIR /app
+COPY autheticuser/pom.xml autheticuser/
+COPY autheticuser/src/ autheticuser/src/
+RUN mvn -f autheticuser/pom.xml clean package -DskipTests
 
-# Argumento para o JAR
-ARG JAR_FILE=autheticuser/target/*.jar
-
-# Copie o arquivo JAR da sua aplicação para o contêiner
-COPY ${JAR_FILE} app.jar
-
-# Exponha a porta que a aplicação roda
+# Etapa final
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY --from=builder /app/autheticuser/target/*.jar app.jar
 EXPOSE 8080
-
-# Comando para executar a aplicação quando o contêiner iniciar
-ENTRYPOINT ["java","-jar","/app.jar"] 
+ENTRYPOINT ["java", "-jar", "app.jar"]
