@@ -6,9 +6,9 @@ Esta aplicação, desenvolvida com **Spring Boot**, fornece autenticação via *
 
 ## ✅ Requisitos
 
-- Java 11 ou superior  
-- Maven instalado  
-- JMeter (para testes de carga)  
+- Java 11 ou superior
+- Maven instalado
+- JMeter (para testes de carga)
 
 ---
 
@@ -19,10 +19,11 @@ Esta aplicação, desenvolvida com **Spring Boot**, fornece autenticação via *
 ```bash
 git clone https://github.com/seuusuario/autheticuser.git
 cd autheticuser
+```
 Compile o projeto:
-
-bash
+```bash
 mvn clean install
+```
 Execute o projeto:
 
 bash
@@ -52,11 +53,11 @@ Para acessar o H2 Console, vá até:
 
 Credenciais:
 
-JDBC URL: jdbc:h2:mem:testdb
+JDBC URL: `jdbc:h2:mem:testdb`
 
-Usuário: Dayra
+Usuário: `sa`
 
-Senha: 123456
+Senha: (em branco)
 
 🧪 Teste de carga com JMeter
 Etapas no JMeter
@@ -98,4 +99,3 @@ Name: Content-Type
 Value: application/json
 
 Visualizar resultados: Clique direito em Thread Group > Add > Listener > View Results Tree
-# av2-arquitetura-web

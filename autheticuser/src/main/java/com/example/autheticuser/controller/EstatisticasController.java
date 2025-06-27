@@ -4,6 +4,7 @@ import com.example.autheticuser.service.ClienteService;
 import com.example.autheticuser.service.ProdutoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -15,9 +16,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/estatisticas")
+@RequestMapping("/estatisticas")
 @RequiredArgsConstructor
 @PreAuthorize("hasRole('ADMIN')") // Todos os endpoints deste controller requerem role ADMIN
+@SecurityRequirement(name = "bearerAuth")
 @Tag(name = "Estatísticas", description = "API para estatísticas do sistema (apenas ADMIN)")
 public class EstatisticasController {
 

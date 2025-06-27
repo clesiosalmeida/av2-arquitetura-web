@@ -77,7 +77,7 @@ public class SecurityConfig {
                 .antMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
                 .antMatchers("/actuator/**").permitAll()
-
+                .antMatchers("/").permitAll()
                 // Endpoints que requerem autenticação
                 .antMatchers("/api/**").authenticated()
 

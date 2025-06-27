@@ -1,6 +1,6 @@
 # 🚀 Configurações do Servidor Web
 server:
-  port: 8080 # Porta padrão para a sua API
+  port: ${PORT:8080} # Usa a variável de ambiente PORT (Railway) ou 8080 como padrão
 
 # 🗄️ Configurações do Banco de Dados H2
 spring:
